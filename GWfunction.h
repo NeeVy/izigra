@@ -17,7 +17,7 @@ void menu(int &wybor, int &jama, int &cel)
 {
 	do
 	{
-	cout<<"z ilu pol ma skladac sie gra?"<<endl;
+	cout<<"z ilu pol ma skladac sie gra? Minimum 5"<<endl;
 	cin>>wybor;
 	jama=rand()%(wybor+1);
 	cel=rand()%(wybor+1);
