@@ -11,7 +11,7 @@
 
 using namespace std;
 
-void menu(int &wybor, int &jama, int &cel)
+void menu(int &wybor, int jama, int &cel)
 {
 	do
 	{
