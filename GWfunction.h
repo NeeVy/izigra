@@ -47,6 +47,7 @@ void NowyRuch(bool &ruchKomp, int &gracz, int &komputer){
 		cout << "Ruzt drugi: " << r2 << endl;
 		cout << "Suma rzutow: " << r1+r2 << endl;
 		komputer += r1+r2;
+		cout << "Jestes na polu nr: " << komputer;
 	}
 	else{
 		int r1 = 1+rand()%6;
@@ -57,6 +58,7 @@ void NowyRuch(bool &ruchKomp, int &gracz, int &komputer){
 		cout << "Ruzt drugi: " << r2 << endl;
 		cout << "Suma rzutow: " << r1+r2 << endl;
 		gracz += r1+r2;
+		cout << "Jestes na polu nr: " << gracz;
 	}
 	
 	ruchKomp = !ruchKomp;
