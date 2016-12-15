@@ -66,7 +66,7 @@ void NowyRuch(bool &ruchKomp, int &gracz, int &komputer){
 
 void start()
 {
-int jama, cel, wybor, gracz, komputer;
+int jama, cel, wybor, gracz, komputer, klose=0, kwin=0,;
 bool ruchkomputer=false;
 	srand(time(NULL));
 	menu(wybor,jama,cel);
@@ -76,22 +76,27 @@ bool ruchkomputer=false;
 		NowyRuch(ruchkomputer, gracz, komputer);
 		if (gracz==jama)
 		{
-		cout<<"Przegrales, poniewaz wpadles do jamy !!!\n";  break;
+		cout<<"Przegrales, poniewaz wpadles do jamy !!!\n";
+		kwin+=1;
+		 break;
 		}
 
 		if(gracz==cel)
 		{
 		cout<<"Gratulacje wygrales!!!\n"; break;
+		klose+=1;
 		}
 		
 		if(komputer==jama)
 		{
 		cout<<"Gratulacje wygrales ! Komputer wpadl do jamy.\n"; break;
+		klose+=1;
 		}
 		
 		if(komputer==cel)
 		{
 		cout<<"Przegrales. Kompter osiagnal cel.\n"; break;
+		kwin+=1;
 		}
 			
 			
