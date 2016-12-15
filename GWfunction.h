@@ -35,7 +35,7 @@ void menu(int &wybor, int &jama, int &cel)
 
 }
 
-void NowyRuch(bool &ruchKomp, int &gracz, int &komputer){
+void NowyRuch(bool &ruchKomp, int &gracz, int &komputer, int wybor){
 	
 	getch();
 	if(ruchKomp){
@@ -46,7 +46,7 @@ void NowyRuch(bool &ruchKomp, int &gracz, int &komputer){
 		cout << "Ruzt pierwszy: " << r1 << endl;
 		cout << "Ruzt drugi: " << r2 << endl;
 		cout << "Suma rzutow: " << r1+r2 << endl;
-		komputer += r1+r2;
+		komputer = (komputer+r1+r2)%wybor+1;
 		cout << "Jestes na polu nr: " << komputer;
 	}
 	else{
@@ -57,7 +57,7 @@ void NowyRuch(bool &ruchKomp, int &gracz, int &komputer){
 		cout << "Ruzt pierwszy: " << r1<< endl;
 		cout << "Ruzt drugi: " << r2 << endl;
 		cout << "Suma rzutow: " << r1+r2 << endl;
-		gracz += r1+r2;
+		gracz = (gracz+r1+r2)%wybor+1;
 		cout << "Jestes na polu nr: " << gracz;
 	}
 	
@@ -66,14 +66,14 @@ void NowyRuch(bool &ruchKomp, int &gracz, int &komputer){
 
 void start()
 {
-int jama, cel, wybor, gracz, komputer;
-bool ruchkomputer=false;
+int jama, cel, wybor, gracz = 0, komputer = 0;
+bool ruchkomputer=false, bool jeszczeRaz = true;
 	srand(time(NULL));
 	menu(wybor,jama,cel);
 	
-	while(true)
+	while()
 	{
-		NowyRuch(ruchkomputer, gracz, komputer);
+		NowyRuch(ruchkomputer, gracz, komputer, wybor);
 		if (gracz==jama)
 		{
 		cout<<"Przegrales, poniewaz wpadles do jamy !!!\n";  break;
