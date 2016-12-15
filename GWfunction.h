@@ -65,6 +65,7 @@ void NowyRuch(bool &ruchKomp, int &gracz, int &komputer, int wybor){
 }
 
 void start(){
+	
 bool jeszczeRaz = false;
 int klose=0, kwin=0;
 do{
@@ -114,13 +115,16 @@ do{
 	cout<<"Ilosc punktkow komputera: "<<kwin<<endl;
 	cout<<"Ilosc Twoich wygranych: "<<klose<<endl;
 	
-		char c;
-		cout << "Czy chcesz zagrac jeszcze raz ? (T/N)" << endl;
-		cin >> c;
-		if(c == 'T' || c == 't')
-			jeszczeRaz = true;
-		else
-			jeszczeRaz = false;
+	char c;
+	cout << "Czy chcesz zagrac jeszcze raz ? (T/N)" << endl;
+	cin >> c;
+	if(c == 'T' || c == 't')
+		jeszczeRaz = true;
+	else
+		jeszczeRaz = false;
+		
+	if(jeszczeRaz)
+		system("cls");
 		
 	}while(jeszczeRaz);
 
