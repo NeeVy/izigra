@@ -103,6 +103,8 @@ do{
 			
 			
 	}
+	cout<<"Ilosc punktkow komputera: "<<kwin<<endl;
+	cout<<"Ilosc Twoich wygranych: "<<klose<<endl;
 	
 		char c;
 		cout << "Czy chcesz zagrac jeszcze raz ? (T/N)" << endl;
