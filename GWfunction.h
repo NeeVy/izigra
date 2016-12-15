@@ -58,7 +58,7 @@ void NowyRuch(bool &ruchKomp, int &gracz, int &komputer, int wybor){
 		cout << "Ruzt drugi: " << r2 << endl;
 		cout << "Suma rzutow: " << r1+r2 << endl;
 		gracz = (gracz+r1+r2)%wybor+1;
-		cout << "Jestes na polu nr: " << gracz;
+		cout << "Jestes na polu nr: " << gracz<<endl;
 	}
 	
 	ruchKomp = !ruchKomp;
@@ -78,27 +78,34 @@ do{
 		NowyRuch(ruchkomputer, gracz, komputer, wybor);
 		if (gracz==jama)
 		{
+		system("cls");
 		cout<<"Przegrales, poniewaz wpadles do jamy !!!\n";
-		kwin+=1;
-		 break;
+		kwin++;
+		break;
 		}
 
 		if(gracz==cel)
 		{
-		cout<<"Gratulacje wygrales!!!\n"; break;
-		klose+=1;
+		system("cls");
+		cout<<"Gratulacje wygrales!!!\n"; 
+		klose++;
+		break;
 		}
 		
 		if(komputer==jama)
 		{
-		cout<<"Gratulacje wygrales ! Komputer wpadl do jamy.\n"; break;
-		klose+=1;
+		system("cls");
+		cout<<"Gratulacje wygrales ! Komputer wpadl do jamy.\n"; 
+		klose++;
+		break;
 		}
 		
 		if(komputer==cel)
 		{
-		cout<<"Przegrales. Kompter osiagnal cel.\n"; break;
-		kwin+=1;
+		system("cls");
+		cout<<"Przegrales. Kompter osiagnal cel.\n";
+		kwin++;
+		break;
 		}
 			
 			
