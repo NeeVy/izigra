@@ -47,7 +47,7 @@ void NowyRuch(bool &ruchKomp, int &gracz, int &komputer, int wybor){
 		cout << "Ruzt drugi: " << r2 << endl;
 		cout << "Suma rzutow: " << r1+r2 << endl;
 		komputer = (komputer+r1+r2)%wybor+1;
-		cout << "Jestes na polu nr: " << komputer;
+		cout << "Jestes na polu nr: " << komputer << endl;
 	}
 	else{
 		int r1 = 1+rand()%6;
@@ -64,14 +64,16 @@ void NowyRuch(bool &ruchKomp, int &gracz, int &komputer, int wybor){
 	ruchKomp = !ruchKomp;
 }
 
-void start()
-{
-int jama, cel, wybor, gracz, komputer, klose=0, kwin=0,;
-bool ruchkomputer=false, bool jeszczeRaz = true;
+void start(){
+bool jeszczeRaz = false;
+do{
+	
+	int jama, cel, wybor, gracz, komputer, klose=0, kwin=0;
+	bool ruchkomputer=false; 
 	srand(time(NULL));
 	menu(wybor,jama,cel);
 	
-	while()
+	while(true)
 	{
 		NowyRuch(ruchkomputer, gracz, komputer, wybor);
 		if (gracz==jama)
@@ -102,6 +104,15 @@ bool ruchkomputer=false, bool jeszczeRaz = true;
 			
 	}
 	
+		char c;
+		cout << "Czy chcesz zagrac jeszcze raz ? (T/N)" << endl;
+		cin >> c;
+		if(c == 'T' || c == 't')
+			jeszczeRaz == true;
+		else
+			jeszczeRaz = false;
+		
+	}while(jeszczeRaz);
 
 }
 
