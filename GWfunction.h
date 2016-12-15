@@ -67,7 +67,7 @@ void NowyRuch(bool &ruchKomp, int &gracz, int &komputer, int wybor){
 void start()
 {
 int jama, cel, wybor, gracz, komputer, klose=0, kwin=0,;
-bool ruchkomputer=false, bool jeszczeRaz = true;
+bool ruchkomputer=false, jeszczeRaz = true;
 	srand(time(NULL));
 	menu(wybor,jama,cel);
 	
@@ -101,7 +101,8 @@ bool ruchkomputer=false, bool jeszczeRaz = true;
 			
 			
 	}
-	
+	cout<<"Ilosc punktkow komputera: "<<kwin<<endl;
+	cout<<"Ilosc Twoich wygranych: "<<klose<<endl;
 
 }
 
