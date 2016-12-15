@@ -66,9 +66,10 @@ void NowyRuch(bool &ruchKomp, int &gracz, int &komputer, int wybor){
 
 void start(){
 bool jeszczeRaz = false;
+int klose=0, kwin=0;
 do{
 	
-	int jama, cel, wybor, gracz, komputer, klose=0, kwin=0;
+	int jama, cel, wybor, gracz, komputer; 
 	bool ruchkomputer=false; 
 	srand(time(NULL));
 	menu(wybor,jama,cel);
@@ -117,7 +118,7 @@ do{
 		cout << "Czy chcesz zagrac jeszcze raz ? (T/N)" << endl;
 		cin >> c;
 		if(c == 'T' || c == 't')
-			jeszczeRaz == true;
+			jeszczeRaz = true;
 		else
 			jeszczeRaz = false;
 		
